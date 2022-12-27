@@ -346,7 +346,7 @@ def plot_pr_curve(px, py, ap, save_dir=Path('pr_curve.png'), names=(), csv=False
     plt.close(fig)
 
     if csv:
-        save_curves(px, py, save_dir=save_dir.with_suffix('.csv'), names=names, xlabel='Recall', ylabel='Precision')
+        save_curves(px, py.T, save_dir=save_dir.with_suffix('.csv'), names=names, xlabel='Recall', ylabel='Precision')
 
 
 @threaded
